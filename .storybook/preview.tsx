@@ -6,10 +6,34 @@ const preview: Preview = {
     controls: {
       matchers: { color: /(background|color)$/i, date: /Date$/i },
     },
-    // 'todo' muestra los fallos de accesibilidad sin romper los tests.
-    // En la lección 2.3 lo subimos a 'error', cuando el sistema ya los supera.
-    a11y: { test: 'todo' },
+    // 'error': un fallo de accesibilidad rompe los tests.
+    a11y: { test: 'error' },
+    options: {
+      storySort: { order: ['Fundamentos', 'Componentes', 'Resumen'] },
+    },
   },
+  // Selector de tema en la barra de Storybook.
+  globalTypes: {
+    theme: {
+      description: 'Tema del sistema',
+      toolbar: {
+        title: 'Tema',
+        icon: 'contrast',
+        items: [
+          { value: 'light', title: 'Claro' },
+          { value: 'dark', title: 'Oscuro' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  initialGlobals: { theme: 'light' },
+  decorators: [
+    (Story, context) => {
+      document.documentElement.dataset.theme = context.globals.theme
+      return <Story />
+    },
+  ],
 }
 
 export default preview

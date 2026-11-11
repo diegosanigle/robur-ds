@@ -1,11 +1,13 @@
 # Robur DS
 
-Design System agéntico de Robur. Repo de referencia del curso
-«Crea un Design System Agéntico».
+Design System agéntico de Robur.
 
 ```bash
 npm install
 npm run storybook
 ```
 
-Estado: **Bloque 1 terminado** — proyecto montado, Button e Input, Storybook y tests.
+Storybook: https://diegosanigle.github.io/robur-ds/
+
+Estado: tokens en dos temas, 11 componentes con contrato, y comprobaciones de
+contraste, contratos y accesibilidad en `npm test`.

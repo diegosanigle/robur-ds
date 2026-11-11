@@ -20,7 +20,7 @@ export function Input({ label, hint, error, numeric = false, id, className = '',
 
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={inputId} className="text-sm font-semibold text-ink">
+      <label htmlFor={inputId} className="text-sm font-semibold text-primary">
         {label}
       </label>
       <input
@@ -29,18 +29,18 @@ export function Input({ label, hint, error, numeric = false, id, className = '',
         aria-invalid={error ? true : undefined}
         aria-describedby={message ? messageId : undefined}
         className={[
-          'min-h-11 w-full rounded-md border bg-surface p-3.5 text-ink shadow-sm',
-          'placeholder:text-ink-3/60',
-          'focus:border-primary focus:outline-none focus:ring-3 focus:ring-primary/20',
+          'min-h-11 w-full rounded-md border bg-surface p-3.5 text-primary shadow-sm',
+          'placeholder:text-tertiary',
+          'focus:border-action focus:outline-none focus:ring-3 focus:ring-focus-ring/20',
           'disabled:cursor-not-allowed disabled:opacity-50',
-          error ? 'border-error-text' : 'border-border',
-          numeric ? 'text-right text-lg font-semibold tabular-nums' : 'text-base',
+          error ? 'border-danger' : 'border-control',
+          numeric ? 'text-right text-h3 tabular-nums' : 'text-body',
           className,
         ].join(' ')}
         {...props}
       />
       {message ? (
-        <p id={messageId} className={`text-sm ${error ? 'text-error-text' : 'text-ink-3'}`}>
+        <p id={messageId} className={`text-sm ${error ? 'text-danger' : 'text-tertiary'}`}>
           {message}
         </p>
       ) : null}
