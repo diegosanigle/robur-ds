@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "vite",
     "tokens": "node scripts/build-tokens.mjs",
-    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs",
+    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-figma.mjs",
     "build": "npm run tokens && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "storybook": "npm run tokens && storybook dev -p 6006",
     "build-storybook": "npm run tokens && storybook build",
-    "test": "npm run check && vitest run"
+    "test": "npm run check && vitest run",
+    "figma:tokens": "node scripts/figma-tokens.mjs"
   },
   "dependencies": {
     "react": "^19.3.1",

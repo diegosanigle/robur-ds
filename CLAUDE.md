@@ -11,7 +11,8 @@ Vite · React · TypeScript · Tailwind CSS v4 · Storybook. No proponer otro.
 
 - `npm run storybook` — Storybook en local (puerto 6006)
 - `npm run tokens` — genera `src/styles/tokens.css` desde `tokens/*.json`
-- `npm run check` — tokens, contraste y contratos
+- `npm run check` — tokens, contraste, contratos y paridad con Figma
+- `npm run figma:tokens` — prepara los tokens para llevarlos a Figma
 - `npm test` — `check` + tests de las stories (interacción y accesibilidad)
 - `npm run build` — comprueba tipos y compila
 
@@ -38,6 +39,18 @@ Vite · React · TypeScript · Tailwind CSS v4 · Storybook. No proponer otro.
 - Cada prop lleva un comentario de una línea: es su documentación.
 - Texto de la interfaz en español. Código y nombres de props en inglés.
 - Antes de dar un cambio por terminado: `npm test` y `npm run build` en verde.
+
+### Figma
+
+- La librería está en https://www.figma.com/design/lTMwgNScwy7MEq8CaafRGC
+- El código manda: un cambio empieza en `tokens/` o en el contrato y después se lleva a Figma. Nunca al revés.
+- Las variables de Figma se crean con `scripts/figma/sync-variables.js`; no se crean a mano.
+- Cada prop del contrato tiene en Figma una propiedad con el mismo nombre y los mismos valores.
+  Las excepciones se escriben en el campo `figma` del contrato, con su motivo.
+- Después de tocar componentes en Figma: ejecutar `scripts/figma/snapshot.js`, guardar el
+  resultado en `figma/library.json` y pasar `npm run check`.
+- En Figma no hay colores a mano: todo relleno y todo borde van enlazados a una variable.
+- El plan gratuito de Figma solo admite un modo: Figma tiene el tema claro. El oscuro vive en el código.
 
 ## Contexto
 

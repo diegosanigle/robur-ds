@@ -119,6 +119,10 @@
   --text-sm--line-height: 1.4;
   --text-sm--font-weight: 400;
   --text-sm--letter-spacing: 0em;
+  --text-control: 0.875rem;
+  --text-control--line-height: 1.4;
+  --text-control--font-weight: 600;
+  --text-control--letter-spacing: 0em;
   --text-label: 0.75rem;
   --text-label--line-height: 1.3;
   --text-label--font-weight: 600;

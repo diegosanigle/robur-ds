@@ -20,7 +20,7 @@ export function Chip({ variant = 'default', selected = false, type = 'button', c
       aria-pressed={selected}
       className={[
         'inline-flex min-h-11 items-center justify-center rounded-pill border px-4',
-        'text-sm font-semibold transition active:scale-95',
+        'text-control transition active:scale-95',
         'disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100',
         selected ? 'border-transparent bg-selected text-on-selected' : VARIANTS[variant],
         className,

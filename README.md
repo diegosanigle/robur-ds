@@ -8,6 +8,7 @@ npm run storybook
 ```
 
 Storybook: https://diegosanigle.github.io/robur-ds/
+Figma: https://www.figma.com/design/lTMwgNScwy7MEq8CaafRGC
 
 Estado: tokens en dos temas, 11 componentes con contrato, y comprobaciones de
-contraste, contratos y accesibilidad en `npm test`.
+contraste, contratos, paridad con Figma y accesibilidad en `npm test`.

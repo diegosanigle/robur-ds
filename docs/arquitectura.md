@@ -29,6 +29,8 @@ Un patrón no inventa un botón: usa el componente.
 ```
 tokens/                  primitivos, semánticos (claro y oscuro), tipografía y parejas de contraste
 scripts/                 generador de tokens y comprobaciones
+scripts/figma/           código que se ejecuta dentro de Figma
+figma/library.json       foto de la librería de Figma, para comprobar la paridad
 src/
   components/<Nombre>/   <Nombre>.tsx · <Nombre>.stories.tsx · <Nombre>.contract.json · index.ts
   foundations/           stories que pintan los tokens
@@ -60,3 +62,17 @@ Cada token semántico genera las clases de Tailwind con las que se usa:
 | `text.h1` | `text-h1` (tamaño, peso, interlineado y tracking a la vez) |
 
 Los primitivos (`color.orange.500`) no generan clases: un componente no puede usarlos.
+
+## Código y Figma
+
+| En el contrato | En Figma |
+|---|---|
+| Prop `enum` | Propiedad de variante con los mismos valores |
+| Prop `boolean` | Propiedad de variante con `false` y `true` |
+| Prop `string` | Propiedad de texto |
+| Contenido (`node`) | Texto o hueco (*slot*), según diga el contrato |
+| `function`, `array`, `number` | No existe, salvo que el contrato diga otra cosa |
+| Estados (`disabled`, `focus`…) | Propiedad de variante `state` |
+| Token semántico `color.bg.action` | Variable `color/bg/action`, colección Semantic |
+| Token primitivo `color.orange.700` | Variable `color/orange/700`, colección Primitives, oculta en los selectores |
+| Estilo de texto `text.h1` | Estilo de texto `text/h1` |

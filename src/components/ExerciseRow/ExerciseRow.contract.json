@@ -1,13 +1,8 @@
 {
   "name": "ExerciseRow",
   "description": "Fila de un ejercicio dentro de una sesión: se marca como hecho y se registran sus cifras.",
-  "useWhen": [
-    "Listar los ejercicios de una sesión mientras se entrena."
-  ],
-  "avoidWhen": [
-    "Para listas que no son ejercicios: usa Checkbox.",
-    "Para mostrar una sesión ya terminada, solo de lectura."
-  ],
+  "useWhen": ["Listar los ejercicios de una sesión mientras se entrena."],
+  "avoidWhen": ["Para listas que no son ejercicios: usa Checkbox.", "Para mostrar una sesión ya terminada, solo de lectura."],
   "props": [
     { "name": "name", "type": "string", "required": true },
     { "name": "target", "type": "string" },
@@ -26,5 +21,13 @@
   "accessibility": [
     "El nombre del ejercicio es la etiqueta de la casilla.",
     "El estado completado lo dice la casilla, no solo el color de fondo."
-  ]
+  ],
+  "figma": {
+    "props": {
+      "name": { "via": "Checkbox.label" },
+      "target": { "via": "Checkbox.hint" },
+      "onCompletedChange": { "omit": "Comportamiento: no existe en Figma." },
+      "children": "SLOT"
+    }
+  }
 }

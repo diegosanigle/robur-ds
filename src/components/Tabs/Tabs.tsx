@@ -49,7 +49,7 @@ export function Tabs({ label, tabs, value, onChange, children }: TabsProps) {
               tabIndex={active ? 0 : -1}
               onClick={() => onChange(tab.value)}
               className={[
-                'min-h-11 flex-1 rounded-pill px-4 text-sm font-semibold transition active:scale-95',
+                'min-h-11 flex-1 rounded-pill px-4 text-control transition active:scale-95',
                 active ? 'bg-selected text-on-selected' : 'text-tertiary',
               ].join(' ')}
             >
