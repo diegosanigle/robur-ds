@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/*
+ * Valores PROVISIONALES copiados de la auditoría de Robur (docs/auditoria.md).
+ * En el Bloque 2 este bloque se sustituye por tokens generados automáticamente.
+ */
+@theme {
+  --color-primary: #ff3b00;
+  --color-primary-ink: #c43004;
+  --color-primary-soft: #ffede7;
+  --color-ink: #15110e;
+  --color-ink-2: #3a322d;
+  --color-ink-3: #6b5f59;
+  --color-bg: #faf7f5;
+  --color-surface: #ffffff;
+  --color-border: #e8e1dc;
+  --color-error-bg: #fdecec;
+  --color-error-text: #b3261e;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgb(21 17 14 / 0.06);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
