@@ -34,3 +34,6 @@ site/patrones
 site/.vitepress/sidebar.json
 site/.vitepress/dist
 site/.vitepress/cache
+
+# Respuestas de los evals: se regeneran en cada ejecución
+evals/outputs

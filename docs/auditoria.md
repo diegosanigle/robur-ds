@@ -67,3 +67,11 @@ body 16 · sm 14 · label 12 en mayúsculas. Cifras siempre tabulares.
 
 Button · Input · Chip · Card · Tabs · Sheet · Checkbox · StatCard · BottomNav ·
 ExerciseRow · HeatmapCell. Patrones: registrar sesión, estado vacío, formulario.
+
+## 5. Piezas pendientes
+
+Situaciones que se resolvieron con una pieza existente. Si aparecen una segunda vez, toca proponer la pieza.
+
+| Qué hacía falta | Dónde | Cómo se resolvió | Veces |
+|---|---|---|---|
+| Fila de una sesión en una lista | Pantalla de historial | Una `Card` por sesión con tres líneas de texto | 1 |

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-11",
+  "system": {
+    "components": 11,
+    "patterns": 3,
+    "semanticTokens": 36,
+    "primitiveColors": 31,
+    "textStyles": 9,
+    "themes": 2,
+    "stories": 58
+  },
+  "coverage": {
+    "contracts": 100,
+    "documentedProps": 100,
+    "figmaParity": 100,
+    "figmaSnapshotAgeDays": 0
+  },
+  "accessibility": {
+    "contrastPairs": 64,
+    "tightestPair": {
+      "pair": "bg.action sobre bg.surface",
+      "theme": "dark",
+      "margin": 1.03
+    }
+  },
+  "evals": null,
+  "app": {
+    "date": "2026-11-11",
+    "files": 31,
+    "filesUsingSystem": 0,
+    "rawControls": 17,
+    "hexColors": 12,
+    "arbitraryValues": 20,
+    "classesOutsideSystem": 99
+  }
+}

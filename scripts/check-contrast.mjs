@@ -17,24 +17,27 @@ export function contrast(a, b) {
   return (light + 0.05) / (dark + 0.05)
 }
 
-const { pairs } = JSON.parse(readFileSync(join(root, 'tokens', 'contrast.json'), 'utf8'))
-const short = (name) => name.replace('color.', '')
-let failed = 0
+// Solo se ejecuta la comprobación cuando el fichero se lanza directamente, no al importarlo.
+if (process.argv[1] === import.meta.filename) {
+  const { pairs } = JSON.parse(readFileSync(join(root, 'tokens', 'contrast.json'), 'utf8'))
+  const short = (name) => name.replace('color.', '')
+  let failed = 0
 
-for (const theme of Object.keys(themes)) {
-  console.log(`\nTema ${theme}`)
-  for (const { fg, bg, min } of pairs) {
-    const ratio = contrast(resolve(theme, fg), resolve(theme, bg))
-    const ok = ratio >= min
-    if (!ok) failed++
-    // Se trunca, no se redondea: 4,499 no es 4,5.
-    const shown = (Math.floor(ratio * 100) / 100).toFixed(2).replace('.', ',')
-    console.log(`  ${ok ? '✓' : '✗'} ${shown.padStart(5)}:1  (mín. ${min})  ${short(fg)} sobre ${short(bg)}`)
+  for (const theme of Object.keys(themes)) {
+    console.log(`\nTema ${theme}`)
+    for (const { fg, bg, min } of pairs) {
+      const ratio = contrast(resolve(theme, fg), resolve(theme, bg))
+      const ok = ratio >= min
+      if (!ok) failed++
+      // Se trunca, no se redondea: 4,499 no es 4,5.
+      const shown = (Math.floor(ratio * 100) / 100).toFixed(2).replace('.', ',')
+      console.log(`  ${ok ? '✓' : '✗'} ${shown.padStart(5)}:1  (mín. ${min})  ${short(fg)} sobre ${short(bg)}`)
+    }
   }
-}
 
-if (failed) {
-  console.error(`\n${failed} pareja(s) no cumplen el contraste mínimo.`)
-  process.exit(1)
+  if (failed) {
+    console.error(`\n${failed} pareja(s) no cumplen el contraste mínimo.`)
+    process.exit(1)
+  }
+  console.log(`\nContraste: ${pairs.length} parejas × ${Object.keys(themes).length} temas, todas cumplen.`)
 }
-console.log(`\nContraste: ${pairs.length} parejas × ${Object.keys(themes).length} temas, todas cumplen.`)

@@ -31,8 +31,13 @@ tokens/                  primitivos, semánticos (claro y oscuro), tipografía y
 scripts/                 generador de tokens y comprobaciones
 scripts/figma/           código que se ejecuta dentro de Figma
 figma/library.json       foto de la librería de Figma, para comprobar la paridad
+mcp/                     servidor MCP y sus datos (generados)
+evals/                   casos, corredor y resultados de los evals
+metrics/                 mediciones del sistema (generadas)
 src/
   components/<Nombre>/   <Nombre>.tsx · <Nombre>.stories.tsx · <Nombre>.contract.json · index.ts
+  screens/<Nombre>/      pantallas compuestas solo con piezas del sistema
+  data/                  la página de métricas de Storybook
   patterns/<Nombre>/     <Nombre>.tsx · <Nombre>.stories.tsx · <Nombre>.pattern.json · index.ts
   foundations/           stories que pintan los tokens
   styles/tokens.css      GENERADO desde tokens/
@@ -80,3 +85,13 @@ Los primitivos (`color.orange.500`) no generan clases: un componente no puede us
 | Token semántico `color.bg.action` | Variable `color/bg/action`, colección Semantic |
 | Token primitivo `color.orange.700` | Variable `color/orange/700`, colección Primitives, oculta en los selectores |
 | Estilo de texto `text.h1` | Estilo de texto `text/h1` |
+
+## Rutina de mantenimiento
+
+| Cuándo | Qué |
+|---|---|
+| En cada cambio | `npm test` |
+| Al cambiar tokens o componentes | `/sincronizar-figma`, que renueva la foto de Figma |
+| Cada semana | `npm run metrics -- <carpeta de la app>` y subir el resultado. Mirar si la deuda de la app baja |
+| Cada mes, o al cambiar contratos, reglas o descripciones del MCP | `npm run evals` y después `npm run metrics` |
+| Cuando un agente se equivoca de una forma nueva | Un caso nuevo en `evals/cases.json` |
