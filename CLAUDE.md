@@ -1,59 +1,42 @@
 # Robur DS
 
-Design System de Robur (app personal de entrenamiento en casa). Este repo es la
-**fuente única** de tokens, componentes y documentación.
+Design System de Robur, una app personal de entrenamiento en casa. Este repo es la
+**fuente única** de tokens, componentes, patrones y documentación.
 
-## Stack — decidido
+Robur registra, no juzga: no hay objetivos, metas ni avisos de fallo. Una semana a
+cero es un dato, no un error.
 
-Vite · React · TypeScript · Tailwind CSS v4 · Storybook. No proponer otro.
+## Dónde mirar, en este orden
+
+1. `docs/catalogo.md` — todo lo que existe, en una página. Empieza siempre aquí.
+2. El contrato de la pieza (`*.contract.json` o `*.pattern.json`) — cuándo se usa, cuándo no y sus reglas.
+3. El código y las stories — solo si vas a cambiar la pieza.
 
 ## Comandos
 
 - `npm run storybook` — Storybook en local (puerto 6006)
-- `npm run tokens` — genera `src/styles/tokens.css` desde `tokens/*.json`
-- `npm run check` — tokens, contraste, contratos y paridad con Figma
-- `npm run figma:tokens` — prepara los tokens para llevarlos a Figma
+- `npm run check` — genera tokens y catálogo, y comprueba contraste, contratos, patrones y paridad con Figma
 - `npm test` — `check` + tests de las stories (interacción y accesibilidad)
 - `npm run build` — comprueba tipos y compila
+- `npm run docs` — genera la web de documentación
 
-## Reglas
+## Reglas que valen siempre
 
-### Tokens
-
-- Los valores viven en `tokens/*.json`. `src/styles/tokens.css` se genera: **no se edita a mano**.
-- Un token semántico apunta siempre a un primitivo. Nunca lleva un valor directo.
-- Los temas claro y oscuro tienen exactamente los mismos tokens.
-- Un par de colores nuevo que se use junto (texto sobre fondo) se añade a `tokens/contrast.json`.
-
-### Componentes
-
-- Cada componente vive en `src/components/<Nombre>/` con cuatro ficheros:
-  `<Nombre>.tsx`, `<Nombre>.stories.tsx`, `<Nombre>.contract.json` e `index.ts`.
-- Todo componente nuevo se exporta desde `src/index.ts`.
-- Un componente solo usa clases que salen de tokens semánticos (`bg-surface`,
-  `text-primary`, `rounded-md`). **Nunca** un valor hex, un primitivo ni un valor
-  arbitrario de Tailwind (`[...]`).
-- Si falta un token, se propone y se añade a `tokens/`; no se improvisa en el componente.
-- El contrato se cambia en el mismo commit que el código. `npm run check` lo verifica.
-- Cada variante y cada estado tienen su story. Lo que no tiene story no existe.
-- Cada prop lleva un comentario de una línea: es su documentación.
+- **Usa lo que hay.** Antes de escribir interfaz, busca en el catálogo un patrón; si no lo hay, componentes. Nunca un `<button>`, un `<input>` o un estilo propio para algo que ya existe.
+- **Si falta algo, para y propónlo.** Un token, una variante o un componente nuevo se propone con su motivo; no se improvisa.
+- **Ningún valor a mano.** Ni hex, ni primitivos, ni valores entre corchetes de Tailwind. Solo las clases del catálogo.
+- **El código manda.** Un cambio empieza en `tokens/` o en un contrato, y de ahí va a Figma. Nunca al revés.
+- **Lo generado no se edita:** `src/styles/tokens.css`, `docs/catalogo.md`, `figma/library.json` y `site/`.
+- **Terminado es en verde.** Un cambio no está hecho hasta que pasan `npm test` y `npm run build`.
 - Texto de la interfaz en español. Código y nombres de props en inglés.
-- Antes de dar un cambio por terminado: `npm test` y `npm run build` en verde.
 
-### Figma
-
-- La librería está en https://www.figma.com/design/lTMwgNScwy7MEq8CaafRGC
-- El código manda: un cambio empieza en `tokens/` o en el contrato y después se lleva a Figma. Nunca al revés.
-- Las variables de Figma se crean con `scripts/figma/sync-variables.js`; no se crean a mano.
-- Cada prop del contrato tiene en Figma una propiedad con el mismo nombre y los mismos valores.
-  Las excepciones se escriben en el campo `figma` del contrato, con su motivo.
-- Después de tocar componentes en Figma: ejecutar `scripts/figma/snapshot.js`, guardar el
-  resultado en `figma/library.json` y pasar `npm run check`.
-- En Figma no hay colores a mano: todo relleno y todo borde van enlazados a una variable.
-- El plan gratuito de Figma solo admite un modo: Figma tiene el tema claro. El oscuro vive en el código.
+Las reglas de cada zona del repo están en `.claude/rules/` y se cargan solas al tocar
+esos ficheros. Los procedimientos largos son skills: `/nuevo-componente`,
+`/nueva-pantalla` y `/sincronizar-figma`.
 
 ## Contexto
 
-- `docs/auditoria.md` — qué había en Robur antes de este sistema y qué se decidió.
-- `docs/arquitectura.md` — capas del sistema, nomenclatura y alcance de la v1.
-- `docs/accesibilidad.md` — qué se comprueba, cómo, y qué no cubren los tests.
+- `docs/arquitectura.md` — capas, nomenclatura y correspondencia entre código y Figma.
+- `docs/accesibilidad.md` — qué se comprueba solo y qué hay que revisar a mano.
+- `docs/auditoria.md` — qué había antes de este sistema y qué se decidió.
+- Figma: https://www.figma.com/design/lTMwgNScwy7MEq8CaafRGC (solo tema claro: el plan gratuito admite un modo).

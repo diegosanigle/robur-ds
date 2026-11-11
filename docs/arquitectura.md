@@ -33,11 +33,15 @@ scripts/figma/           código que se ejecuta dentro de Figma
 figma/library.json       foto de la librería de Figma, para comprobar la paridad
 src/
   components/<Nombre>/   <Nombre>.tsx · <Nombre>.stories.tsx · <Nombre>.contract.json · index.ts
+  patterns/<Nombre>/     <Nombre>.tsx · <Nombre>.stories.tsx · <Nombre>.pattern.json · index.ts
   foundations/           stories que pintan los tokens
   styles/tokens.css      GENERADO desde tokens/
   styles/index.css       estilos base
   index.ts               todo lo que el sistema exporta
-docs/                    auditoría, arquitectura y accesibilidad
+docs/                    auditoría, arquitectura, accesibilidad y catálogo (generado)
+site/                    web de documentación (generada con npm run docs)
+.claude/rules/           reglas por zona del repo
+.claude/skills/          procedimientos: nuevo componente, nueva pantalla, sincronizar Figma
 .storybook/              configuración de Storybook
 .github/workflows/       publicación automática
 ```

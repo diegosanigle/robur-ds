@@ -25,3 +25,12 @@ dist-ssr
 
 *storybook.log
 storybook-static
+
+# Web de documentación: las páginas se generan con npm run docs
+site/index.md
+site/tokens.md
+site/componentes
+site/patrones
+site/.vitepress/sidebar.json
+site/.vitepress/dist
+site/.vitepress/cache

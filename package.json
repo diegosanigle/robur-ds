@@ -6,14 +6,17 @@
   "scripts": {
     "dev": "vite",
     "tokens": "node scripts/build-tokens.mjs",
-    "check": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-figma.mjs",
+    "check": "node scripts/build-tokens.mjs && node scripts/build-catalog.mjs && node scripts/check-contrast.mjs && node scripts/check-contracts.mjs && node scripts/check-patterns.mjs && node scripts/check-figma.mjs",
     "build": "npm run tokens && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "storybook": "npm run tokens && storybook dev -p 6006",
     "build-storybook": "npm run tokens && storybook build",
     "test": "npm run check && vitest run",
-    "figma:tokens": "node scripts/figma-tokens.mjs"
+    "figma:tokens": "node scripts/figma-tokens.mjs",
+    "catalog": "node scripts/build-catalog.mjs",
+    "docs": "node scripts/build-docs.mjs && vitepress build site",
+    "docs:dev": "node scripts/build-docs.mjs && vitepress dev site"
   },
   "dependencies": {
     "react": "^19.3.1",
@@ -38,6 +41,7 @@
     "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
     "vite": "^8.3.6",
+    "vitepress": "^1.6.4",
     "vitest": "latest"
   }
 }

@@ -9,7 +9,7 @@ const preview: Preview = {
     // 'error': un fallo de accesibilidad rompe los tests.
     a11y: { test: 'error' },
     options: {
-      storySort: { order: ['Fundamentos', 'Componentes', 'Resumen'] },
+      storySort: { order: ['Fundamentos', 'Componentes', 'Patrones', 'Resumen'] },
     },
   },
   // Selector de tema en la barra de Storybook.
