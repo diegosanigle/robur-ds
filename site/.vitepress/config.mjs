@@ -8,14 +8,14 @@ export default defineConfig({
   lang: 'es',
   title: 'Robur DS',
   description: 'Documentación del Design System de Robur, generada desde el código.',
-  // En GitHub Pages la web vive en /robur-ds/docs/.
+  // En GitHub Pages la web vive en /robur-ds-react/docs/.
   base: process.env.DOCS_BASE ?? '/',
   cleanUrls: true,
   themeConfig: {
     sidebar,
     outline: { label: 'En esta página' },
     docFooter: { prev: 'Anterior', next: 'Siguiente' },
-    nav: [{ text: 'Storybook', link: 'https://diegosanigle.github.io/robur-ds/' }],
+    nav: [{ text: 'Storybook', link: 'https://diegosanigle.github.io/robur-ds-react/' }],
     search: { provider: 'local' },
   },
 })

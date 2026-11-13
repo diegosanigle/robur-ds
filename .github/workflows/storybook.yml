@@ -44,7 +44,7 @@ jobs:
       # La documentación generada se publica dentro del mismo sitio, en /docs/.
       - run: npm run docs
         env:
-          DOCS_BASE: /robur-ds/docs/
+          DOCS_BASE: /robur-ds-react/docs/
       - run: cp -r site/.vitepress/dist storybook-static/docs
       - uses: actions/upload-pages-artifact@v5
         with:

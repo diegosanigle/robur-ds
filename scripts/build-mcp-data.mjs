@@ -6,7 +6,7 @@ import { components, patterns } from './lib/system.mjs'
 import { colorClasses, primitives, reference, resolve, root, themes, typography } from './lib/tokens.mjs'
 import { contrast } from './check-contrast.mjs'
 
-const SITE = 'https://diegosanigle.github.io/robur-ds'
+const SITE = 'https://diegosanigle.github.io/robur-ds-react'
 const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'))
 
 function example(piece) {

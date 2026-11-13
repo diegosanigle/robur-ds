@@ -7,8 +7,8 @@ npm install
 npm run storybook
 ```
 
-Storybook: https://diegosanigle.github.io/robur-ds/
-Documentación: https://diegosanigle.github.io/robur-ds/docs/
+Storybook: https://diegosanigle.github.io/robur-ds-react/
+Documentación: https://diegosanigle.github.io/robur-ds-react/docs/
 Figma: https://www.figma.com/design/lTMwgNScwy7MEq8CaafRGC
 
 Estado: tokens en dos temas, 11 componentes y 3 patrones con contrato, reglas y skills
@@ -22,7 +22,7 @@ Añade el MCP a la configuración de tu agente (en Claude Code, un fichero `.mcp
 ```json
 {
   "mcpServers": {
-    "robur-ds": { "command": "npx", "args": ["-y", "github:diegosanigle/robur-ds"] }
+    "robur-ds": { "command": "npx", "args": ["-y", "github:diegosanigle/robur-ds-react"] }
   }
 }
 ```

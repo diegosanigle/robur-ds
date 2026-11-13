@@ -74,8 +74,8 @@
     }
    },
    "example": "import { BottomNav } from 'robur-ds'\n\n<BottomNav items={…} value=\"…\" />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/BottomNav",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-bottomnav--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/BottomNav",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-bottomnav--default"
   },
   "Button": {
    "name": "Button",
@@ -168,8 +168,8 @@
     ]
    },
    "example": "import { Button } from 'robur-ds'\n\n<Button>…</Button>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Button",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-button--primary"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Button",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-button--primary"
   },
   "Card": {
    "name": "Card",
@@ -234,8 +234,8 @@
     }
    },
    "example": "import { Card } from 'robur-ds'\n\n<Card>…</Card>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Card",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-card--surface"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Card",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-card--surface"
   },
   "Checkbox": {
    "name": "Checkbox",
@@ -305,8 +305,8 @@
     ]
    },
    "example": "import { Checkbox } from 'robur-ds'\n\n<Checkbox label=\"…\" />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Checkbox",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-checkbox--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Checkbox",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-checkbox--default"
   },
   "Chip": {
    "name": "Chip",
@@ -386,8 +386,8 @@
     ]
    },
    "example": "import { Chip } from 'robur-ds'\n\n<Chip>…</Chip>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Chip",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-chip--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Chip",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-chip--default"
   },
   "ExerciseRow": {
    "name": "ExerciseRow",
@@ -466,8 +466,8 @@
     }
    },
    "example": "import { ExerciseRow } from 'robur-ds'\n\n<ExerciseRow name=\"…\" completed={…} onCompletedChange={…}>…</ExerciseRow>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/ExerciseRow",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-exerciserow--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/ExerciseRow",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-exerciserow--default"
   },
   "HeatmapCell": {
    "name": "HeatmapCell",
@@ -550,8 +550,8 @@
     }
    },
    "example": "import { HeatmapCell } from 'robur-ds'\n\n<HeatmapCell week={…} sessions={…} />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/HeatmapCell",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-heatmapcell--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/HeatmapCell",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-heatmapcell--default"
   },
   "Input": {
    "name": "Input",
@@ -642,8 +642,8 @@
     ]
    },
    "example": "import { Input } from 'robur-ds'\n\n<Input label=\"…\" />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Input",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-input--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Input",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-input--default"
   },
   "Sheet": {
    "name": "Sheet",
@@ -720,8 +720,8 @@
     }
    },
    "example": "import { Sheet } from 'robur-ds'\n\n<Sheet open={…} onClose={…} title=\"…\">…</Sheet>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Sheet",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-sheet--open"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Sheet",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-sheet--open"
   },
   "StatCard": {
    "name": "StatCard",
@@ -801,8 +801,8 @@
    ],
    "figma": {},
    "example": "import { StatCard } from 'robur-ds'\n\n<StatCard label=\"…\" value=\"…\" />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/StatCard",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-statcard--surface"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/StatCard",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-statcard--surface"
   },
   "Tabs": {
    "name": "Tabs",
@@ -891,8 +891,8 @@
     }
    },
    "example": "import { Tabs } from 'robur-ds'\n\n<Tabs label=\"…\" tabs={…} value=\"…\" onChange={…}>…</Tabs>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/componentes/Tabs",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/componentes-tabs--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/componentes/Tabs",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/componentes-tabs--default"
   }
  },
  "patterns": {
@@ -946,8 +946,8 @@
     "La acción es un Button con texto visible."
    ],
    "example": "import { EmptyState } from 'robur-ds'\n\n<EmptyState title=\"…\" description=\"…\" />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/patrones/EmptyState",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/patrones-emptystate--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/patrones/EmptyState",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/patrones-emptystate--default"
   },
   "FormLayout": {
    "name": "FormLayout",
@@ -1019,8 +1019,8 @@
     "El orden del foco es el orden visual: campos, acción principal, cancelar."
    ],
    "example": "import { FormLayout } from 'robur-ds'\n\n<FormLayout title=\"…\" submitLabel=\"…\" onSubmit={…}>…</FormLayout>",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/patrones/FormLayout",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/patrones-formlayout--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/patrones/FormLayout",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/patrones-formlayout--default"
   },
   "SessionLog": {
    "name": "SessionLog",
@@ -1094,8 +1094,8 @@
     "Todo el flujo se puede hacer con el teclado."
    ],
    "example": "import { SessionLog } from 'robur-ds'\n\n<SessionLog dayTypes={…} dayType=\"…\" onDayTypeChange={…} exercises={…} onExerciseChange={…} onSave={…} />",
-   "docs": "https://diegosanigle.github.io/robur-ds/docs/patrones/SessionLog",
-   "storybook": "https://diegosanigle.github.io/robur-ds/?path=/story/patrones-sessionlog--default"
+   "docs": "https://diegosanigle.github.io/robur-ds-react/docs/patrones/SessionLog",
+   "storybook": "https://diegosanigle.github.io/robur-ds-react/?path=/story/patrones-sessionlog--default"
   }
  },
  "tokens": [

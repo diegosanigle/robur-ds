@@ -8,7 +8,7 @@ import { colorClasses, primitives, reference, resolve, root, themes, typography 
 
 const site = join(root, 'site')
 // Los ejemplos en vivo son las stories publicadas: una sola fuente también para los ejemplos.
-const STORYBOOK = process.env.STORYBOOK_URL ?? 'https://diegosanigle.github.io/robur-ds'
+const STORYBOOK = process.env.STORYBOOK_URL ?? 'https://diegosanigle.github.io/robur-ds-react'
 // El texto de los contratos puede llevar etiquetas como <dialog>: se escapan para que no se interpreten.
 const safe = (text) => String(text).replaceAll('<', '&lt;')
 const esc = (text) => safe(text).replaceAll('|', '\\|')
