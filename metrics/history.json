@@ -5,7 +5,7 @@
     "patterns": 3,
     "stories": 58,
     "figmaParity": 100,
-    "evalsWithMcp": null,
+    "evalsWithMcp": 100,
     "appRawControls": 17,
     "appClassesOutsideSystem": 99
   }

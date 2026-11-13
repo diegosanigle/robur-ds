@@ -23,7 +23,20 @@
       "margin": 1.03
     }
   },
-  "evals": null,
+  "evals": {
+    "date": "2026-11-11",
+    "model": "sonnet",
+    "sin-sistema": {
+      "passed": 0,
+      "total": 6,
+      "rate": 0
+    },
+    "con-mcp": {
+      "passed": 6,
+      "total": 6,
+      "rate": 100
+    }
+  },
   "app": {
     "date": "2026-11-11",
     "files": 31,
